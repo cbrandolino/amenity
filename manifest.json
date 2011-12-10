@@ -1,0 +1,19 @@
+{
+  "name": "Amenity",
+  "version": "0.1",
+  "description": "A google chrome notifier + reader for Amen (http://getamen.com)",
+  "background_page": "background.html",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "popup": "popup.html"
+  },
+  "icons" : {
+    "128" : "icon128.png",
+    "48" : "icon48.png",
+    "16" : "icon16.png"
+  },
+  "permissions": [
+    "https://getamen.com/",
+    "tabs"
+  ]
+}

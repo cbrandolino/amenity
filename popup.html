@@ -1,0 +1,82 @@
+<style>
+body {
+  min-width:357px;
+  overflow-x:hidden;
+}
+.user, .textbox {
+	vertical-align:top;
+}
+.user {
+	width: 40px;
+	height: 40px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #2C2C2C;
+	display: inline-block;
+	top: 5px;
+	left: 5px;	
+	border-radius: 3px;
+}
+
+.textbox {
+	color:#7d7d7d;
+	width:260px;
+	display:inline-block;
+	margin-left:10px;
+	margin-top:-4px;
+}
+
+.item {
+	display: block;
+	margin-bottom: 5px;
+	font: 13px "Helvetica Neue",Arial,Helvetica,verdana,sans-serif;
+	min-height: 30px;
+	padding-left: 55px;
+	border-radius: 5px;
+	background-color: #2C2C2C;
+	padding: 10px;
+	cursor: pointer;
+	padding-right: 30px;
+}
+
+.item:hover {
+	background-color:black;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAUCAYAAABmvqYOAAAAiUlEQVR42rXVsQ6CQBREUZHCbuNW0IrRTgP6%2F9%2B2zC3MbgyJicwr7iPbnCk5lFLaer6u2sdZzSq58axe6q0W1wAnVZh8A5yjuoO6BzhhA5ywAU7YACdsgGMe%2BI136rKBP9RpDw487YUpDKZv%2BLoBP%2F%2BBKQymD3zzwhXPfrjiNLjhFqfRCVPob24FwrpxJRFlE5gAAAAASUVORK5CYII%3D);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.object {
+	font-weight:bold;
+}
+
+.type0 {
+	color:#dfff00;
+}
+
+.type2 {
+	color:#f78c01;
+}
+
+.type1 {
+	color:#048ce1;
+}
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
+<script src="scripts.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+	if (localStorage.offline == 1) {
+		offline();
+	} else if(localStorage.posts) {
+		makeHTML(JSON.parse(localStorage.posts));
+	} else {
+		refreshData(1);
+	}
+});
+</script>
+<div class="items">
+
+</div>
