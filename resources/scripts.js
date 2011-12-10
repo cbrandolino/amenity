@@ -58,7 +58,7 @@ function makeHTML(data) {
 				break;
 				
 			case "new hot topic":
-				picLink = "awesome.png" ;
+				picLink = "resources/awesome.png" ;
 				amenLink = "https://getamen.com/topics/"+item.topic.slug;
 				text = "Rejoice! Your topic on the ";
 				text += (item.topic.best)? "Best " : "Worst ";
@@ -113,7 +113,7 @@ function offline() {
 		"chrome.tabs.create({'url':'https://getamen.com/sign-in'})"
 	);
 	newElement.append(
-		'<span class="user" style="background-image:url(sad.png);"> </span>'
+		'<span class="user" style="background-image:url(resources/sad.png);"> </span>'
 	);
 	newElement.append('<div class="textbox">It looks like you\'re offline :(<br/>Click here to log in, we miss you!</div>');	
 	$('.items').append(newElement);
