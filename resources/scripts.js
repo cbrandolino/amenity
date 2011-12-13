@@ -1,4 +1,4 @@
-function refreshData() {
+function refreshData(html) {
 	$.get(
 		"https://getamen.com/notifications.json", 
 		function(data) {

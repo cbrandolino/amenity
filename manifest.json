@@ -1,6 +1,6 @@
 {
   "name": "Amenity",
-  "version": "0.1",
+  "version": "0.2",
   "description": "A google chrome notifier + reader for Amen (http://getamen.com)",
   "background_page": "background.html",
   "browser_action": {
